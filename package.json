@@ -1,0 +1,44 @@
+{
+  "name": "tripoverflow",
+  "version": "1.0.0",
+  "description": "a disscussion forum about trips",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shasha047/tripoverflow.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "Express",
+    "MongoDB",
+    "Ques-Ans-Forum"
+  ],
+  "author": "shashank bhatnagar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shasha047/tripoverflow/issues"
+  },
+  "homepage": "https://github.com/shasha047/tripoverflow#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-cookies": "^1.6.4",
+    "angular-jwt": "^0.1.9",
+    "angular-route": "^1.6.4",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.3",
+    "jquery": "^3.2.1",
+    "jsonwebtoken": "^7.4.1",
+    "jwt-simple": "^0.5.1",
+    "mongodb": "^2.2.28",
+    "mongoose": "^4.10.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

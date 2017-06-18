@@ -1,0 +1,27 @@
+<h1>{{ vm.quesans.qas }} </h1>
+
+<p><small>{{ vm.quesans.name }}</small></p>
+
+
+<h3>Comments</h3>
+<ul>
+  <li ng-repeat="comment in vm.quesans.comments"> <strong>{{ comment.name }} says:</strong> {{ comment.comment }}<hr><br></li>
+</ul>
+<hr>
+<div ng-if="vm.isLoggedIn()">
+  <form name="vm.commentForm" ng-submit="vm.addComment()">
+    
+
+    Your comment: <textarea name="comment" required ng-model="vm.comment"></textarea>
+    <div ng-show="vm.commentForm.comment.$dirty && vm.isSubmitted">
+      <p>Please add a comment</p>
+    </div>
+
+    <button type="submit" class="btn">Add Comment</button>
+  </form>
+</div>
+<div ng-if="!vm.isLoggedIn()">
+  <h4>Click to Register/Login to Participate or see Discussions !
+  </h4>
+  
+</div>

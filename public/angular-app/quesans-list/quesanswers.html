@@ -1,0 +1,34 @@
+<h1>{{ vm.title }}</h1>
+<hr>
+<br>
+
+<div ng-if="vm.isLoggedIn()">
+  <form name="vm.quesansForm" ng-submit="vm.addQuesans()">
+    
+
+    Ask Question : <input type="text" name="newquesans" required ng-model="vm.newquesans"></input>
+    <div ng-show="vm.quesansForm.newquesans.$dirty && vm.isSubmitted">
+      <p>Please add a Question</p>
+    </div>
+
+    <button type="submit" class="btn">Add Question</button>
+  </form>
+</div>
+
+<div ng-if="!vm.isLoggedIn()">
+  <h3>Click to Register/Login to Participate or see Discussions below !
+  </h3>
+  
+</div>
+
+<hr>
+<br>
+
+<div>
+<p ng-if="vm.isLoggedIn()">Or find Similar in the List Of Trip Discussion</p>
+<br>
+<ul>
+  <li ng-repeat="qas in vm.quesans"><a ng-href="#/quesans/{{ qas._id }}">{{ qas.qas }}</a><h5> => asked by =>{{qas.name}}</h5><hr><br></li>
+</ul>
+
+</div>
